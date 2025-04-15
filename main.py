@@ -5,7 +5,7 @@ import random
 
 # Config
 TELEGRAM_TOKEN = '7641381058:AAGY2TXG9ZOLfq5Rql3ai0Ff0Jak_hf2dHY'
-CHAT_ID_AUTORIZADO = 5171106537  # reemplazar con tu chat ID
+CHAT_ID_AUTORIZADO = '5171106537'  # reemplazar con tu chat ID
 
 # Variable para guardar cuántas URLs se deben calificar
 cantidad_urls_a_calificar = 10  # por defecto
