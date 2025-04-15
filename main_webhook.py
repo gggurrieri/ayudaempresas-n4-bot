@@ -6,9 +6,8 @@ from telegram import Update, Bot
 from telegram.ext import Application, CommandHandler, ContextTypes
 from calificador_n4 import calificar_url_n4
 
-TELEGRAM_TOKEN = os.getenv("7641381058:AAGY2TXG9ZOLfq5Rql3ai0Ff0Jak_hf2dHY")
-TELEGRAM_CHAT_ID = os.getenv("5171106537")
-WEBHOOK_URL = os.getenv("https://ayudaempresas-n4-bot.onrender.com")
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+WEBHOOK_URL = os.getenv("WEBHOOK_URL")
 
 bot = Bot(token=TELEGRAM_TOKEN)
 application = Application.builder().token(TELEGRAM_TOKEN).build()
@@ -77,7 +76,7 @@ async def ejecutar_bot(update: Update, context: ContextTypes.DEFAULT_TYPE):
         resultado_mensaje.append(resultado_texto)
 
     final = "\n\n".join(resultado_mensaje)
-    await context.bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=f"✅ Resultado de calificación de {cantidad_urls_a_calificar} URLs:\n\n{final}")
+    await update.message.reply_text(f"✅ Resultado de calificación de {cantidad_urls_a_calificar} URLs:\n\n{final}")
 
 async def activar(update: Update, context: ContextTypes.DEFAULT_TYPE):
     global cantidad_urls_a_calificar
