@@ -10,7 +10,7 @@ from detectar_urls_n4 import detectar_urls_n4
 TELEGRAM_TOKEN = os.getenv("7641381058:AAGY2TXG9ZOLfq5Rql3ai0Ff0Jak_hf2dHY")
 WEBHOOK_URL = os.getenv("https://ayudaempresas-n4-bot.onrender.com")
 
-bot = Bot(token=TELEGRAM_TOKEN)
+bot = Bot(token="5171106537")
 application = Application.builder().token(TELEGRAM_TOKEN).build()
 
 cantidad_urls_a_calificar = 10
