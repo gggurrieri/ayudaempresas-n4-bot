@@ -57,8 +57,7 @@ async def activar(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def actualizar_urls(update: Update, context: ContextTypes.DEFAULT_TYPE):
     base_url = context.args[0] if context.args else URL_N4_POR_DEFECTO
-    await update.message.reply_text("🔍 Buscando URLs N4 desde:
-" + base_url)
+    await update.message.reply_text("🔍 Buscando URLs N4 desde:" + base_url)
     try:
         urls_encontradas = detectar_urls_n4(base_url)
         await update.message.reply_text(f"✅ Se guardaron {len(urls_encontradas)} URLs N4.")
