@@ -7,8 +7,8 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 from calificador_n4 import calificar_url_n4
 from detectar_urls_n4 import detectar_urls_n4
 
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
-WEBHOOK_URL = os.getenv("WEBHOOK_URL")
+TELEGRAM_TOKEN = os.getenv("7641381058:AAGY2TXG9ZOLfq5Rql3ai0Ff0Jak_hf2dHY")
+WEBHOOK_URL = os.getenv("https://ayudaempresas-n4-bot.onrender.com")
 
 bot = Bot(token=TELEGRAM_TOKEN)
 application = Application.builder().token(TELEGRAM_TOKEN).build()
